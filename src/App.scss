@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+
 .App {
   text-align: center;
+  justify-content: space-around;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
 }
 
 .App-logo {
