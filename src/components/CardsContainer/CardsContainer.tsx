@@ -1,18 +1,22 @@
+import { useSelector } from 'react-redux';
+import { getPhonesArraySelector } from '../../store/selectors';
 import { Card } from '../Card/Card';
 import './CardsContainer.scss';
 
 export const CardsContainer : React.FC = () => {
+  const phonesArray = useSelector(getPhonesArraySelector);
+
+  console.log(phonesArray);
   return (
     <div className="cardsContainer">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
+      {phonesArray.map(singlePhone => (
+        <Card
+          name={singlePhone.name}
+          price={singlePhone.price}
+          image={singlePhone.image}
+          description={singlePhone.description}
+        />
+      ))}
     </div>
   )
 }
