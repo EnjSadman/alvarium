@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    border: 1px solid rgb(207, 201, 201);
+    border-radius: 5px;
+    max-width: 300px;
+
+    &__imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--image {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    &__info {
+        text-align: start;
+    }
+}
