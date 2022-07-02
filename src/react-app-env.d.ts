@@ -7,3 +7,15 @@ export interface Phone {
   image: string,
   description: string,
 }
+
+export interface State {
+  arrayOfPhones : Phone[],
+  minimalPrice: number | null,
+  maximalPrice: number | null,
+  currentCurrency: string,
+}
+
+export interface Action {
+  type: string,
+  payload: any,
+}
