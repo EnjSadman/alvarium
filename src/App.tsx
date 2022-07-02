@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import { Card } from './components/Card/Card';
+import { Sidebar } from './components/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className="App">
-      <Card />
+      <Sidebar />
     </div>
   );
 }
