@@ -1,0 +1,52 @@
+.sidebar {
+  left: 0px;
+
+  &__priceSetters{
+    &--input{
+      &:first-of-type::before{
+        content: 'от';
+        position: relative;
+      }
+    }
+  }
+
+  &__currency {
+    
+    &--input {
+      opacity: 0;
+      position: absolute;
+      
+      &:checked + label {
+        background-color: rgb(31, 99, 102);
+      }
+    }
+
+    &--label {
+      cursor: pointer;
+
+      color: white;
+      font-weight: bold;
+      background-color: cadetblue;
+
+      border: 1px solid black;
+
+      transition: background-color 0.5s ease-in-out;
+
+      &:first-of-type {
+        padding: 5px 0 5px 5px;
+        border-radius: 5px 0px 2px 5px;
+      }
+
+      &:last-of-type {
+        padding: 5px 5px 5px 0px;
+        border-radius: 0px 5px 5px 0px;
+      }
+    }
+  }
+
+  &__sorting {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+}
