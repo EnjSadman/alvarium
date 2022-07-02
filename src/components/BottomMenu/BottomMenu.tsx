@@ -3,7 +3,12 @@ import './BottomMenu.scss';
 export const BottomMenu : React.FC = () => {
   return (
     <div className="bottomMenu">
-      <form className="bottomMenu__form form">
+      <form
+        className="bottomMenu__form form"
+        onSubmit={(event) => {
+          event.preventDefault();
+        }}
+      >
         <div className="form__inputs">
           <label className="form__label" htmlFor="">
             name
@@ -15,7 +20,7 @@ export const BottomMenu : React.FC = () => {
           </label>        
         </div>
         <textarea
-          className="form__input"
+          className="form__textarea"
           name=""
           placeholder="description"
           id=""/>
@@ -33,7 +38,7 @@ export const BottomMenu : React.FC = () => {
             </label>
           </label>
         </div>
-          <button type="submit">
+          <button className="form__submit" type="submit">
             Save
           </button>
       </form>

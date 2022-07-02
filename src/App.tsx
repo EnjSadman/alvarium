@@ -7,12 +7,14 @@ import { CardsContainer } from './components/CardsContainer/CardsContainer';
 function App() {
   return (
     <div className="App">
-      <div className="App__content">
-        <Sidebar />
-        <CardsContainer />
-      </div>
-      <div className="App__menu">
-        <BottomMenu />
+      <div className="container">
+        <div className="App__content">
+          <Sidebar />
+          <CardsContainer />
+        </div>
+        <div className="App__menu">
+          <BottomMenu />
+        </div>
       </div>
     </div>
   );

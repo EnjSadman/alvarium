@@ -9,6 +9,10 @@ export const CardsContainer : React.FC = () => {
       <Card/>
       <Card/>
       <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
     </div>
   )
 }

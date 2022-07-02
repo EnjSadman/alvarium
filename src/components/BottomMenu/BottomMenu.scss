@@ -1,11 +1,12 @@
 .bottomMenu {
   display: flex;
   justify-content: center;
+
   &__form {
+    width: 500px;
     display: grid;
-    grid-template-columns: 0.7fr 1fr;
+    grid-template-columns: 0.8fr 1fr;
     column-gap: 50px;
-    width: 80%;
   }
 }
 
@@ -16,6 +17,11 @@
     &--image {
       display: none;
     }
+  }
+
+  &__textarea {
+    font-family: 'Lato', sans-serif;
+    resize: none;
   }
 
   &__inputs {
@@ -32,10 +38,10 @@
     display: flex;
     justify-content: space-between;
     margin: auto;
+    margin-bottom: 20px;
   }
-}
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
-  opacity: 1;
+  &__submit {
+    margin-top: 50px;
+  }
 }

@@ -1,20 +1,43 @@
 .sidebar {
   left: 0px;
 
-  &__priceSetters{
-    &--input{
-      &:first-of-type::before{
-        content: 'от';
-        position: relative;
+  &__priceSetters {
+    display: flex;
+    margin-bottom: 50px;
+
+    &--input {
+      max-width: 60px;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        opacity: 1;
       }
+    }
+
+    &--container {
+      display: flex;
+      flex-direction: column;
+
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+
+    &--label {
+      margin-bottom: 15px;
     }
   }
 
   &__currency {
+    margin-bottom: 50px;
     
     &--input {
-      opacity: 0;
       position: absolute;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      width: 1px;
+      border: 0;
+      overflow: hidden;
       
       &:checked + label {
         background-color: rgb(31, 99, 102);
@@ -22,31 +45,34 @@
     }
 
     &--label {
-      cursor: pointer;
-
       color: white;
       font-weight: bold;
       background-color: cadetblue;
+      line-height: 1;
 
       border: 1px solid black;
 
       transition: background-color 0.5s ease-in-out;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       &:first-of-type {
-        padding: 5px 0 5px 5px;
-        border-radius: 5px 0px 2px 5px;
+        padding: 10px 5px 10px 10px;
+        border-radius: 5px 0 0 5px;
       }
 
       &:last-of-type {
-        padding: 5px 5px 5px 0px;
-        border-radius: 0px 5px 5px 0px;
+        padding: 10px 10px 10px 5px;
+        border-radius: 0 5px 5px 0;
       }
     }
   }
 
   &__sorting {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
+    &--label {
+      display: block;
+    }
   }
 }
