@@ -1,0 +1,41 @@
+.bottomMenu {
+  display: flex;
+  justify-content: center;
+  &__form {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    column-gap: 50px;
+    width: 80%;
+  }
+}
+
+.form {
+  &__input {
+    cursor: pointer;
+
+    &--image {
+      display: none;
+    }
+  }
+
+  &__inputs {
+    &--number {
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
