@@ -35,6 +35,7 @@ export const CardsContainer : React.FC = () => {
     ? (<div className="cardsContainer">
       {sortedPhones.map(singlePhone => (
         <Card
+          key={singlePhone.id}
           id={singlePhone.id}
           name={singlePhone.name}
           price={singlePhone.price}

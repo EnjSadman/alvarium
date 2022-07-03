@@ -39,9 +39,28 @@
     justify-content: space-between;
     margin: auto;
     margin-bottom: 20px;
+
+    &--button {
+      line-height: 0%;
+      border-radius: 5px;
+      padding: 15px;
+      cursor: pointer;
+      background-color: wheat;
+
+      transition: box-shadow 0.5s;
+
+      &:hover {
+        box-shadow: 3px 1px 1px black;
+      }
+    }
   }
 
   &__submit {
     margin-top: 50px;
   }
+}
+
+.invalid_input {
+  color: red;
+  border: solid 1px red;
 }

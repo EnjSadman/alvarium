@@ -30,6 +30,10 @@
 
   &__currency {
     margin-bottom: 50px;
+
+    &--header {
+      margin-bottom: 25px;
+    }
     
     &--input {
       position: absolute;

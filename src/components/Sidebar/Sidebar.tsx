@@ -33,6 +33,7 @@ export const Sidebar : React.FC = () => {
           type="number"
           name="minimal_price"
           id="minimal_price"
+          min="0"
           value={minimal}
           onChange={(event) => {
             dispatch(setCurrentMinimalPrice(Number(event.target.value)))
@@ -48,6 +49,7 @@ export const Sidebar : React.FC = () => {
           type="number"
           name="maximum_price"
           id="maximum_price"
+          min="0"
           value={maximal}
           onChange={(event) => {
             dispatch(setCurrentMaximalPrice(Number(event.target.value)))
@@ -56,7 +58,7 @@ export const Sidebar : React.FC = () => {
         </div>        
       </div>
       <div className="sidebar__currency">
-      <h2>Currency</h2>
+      <h2 className="sidebar__currency--header">Currency</h2>
       <input
             className="sidebar__currency--input"
             type="radio"
