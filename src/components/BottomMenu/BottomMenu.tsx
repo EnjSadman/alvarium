@@ -13,6 +13,7 @@ export const BottomMenu : React.FC = () => {
   const [descriptionNotValid, setValidOfDescription] = useState(false);
 
   const [selectedFileName, setSelectedFileName] = useState('');
+  const [isImageSelected, setImageSelected] = useState(false);
 
   return (
     <div className="bottomMenu">
@@ -104,8 +105,7 @@ export const BottomMenu : React.FC = () => {
               type="file"
               accept="image/png, image/jpeg"
               onChange={(event) => {
-                const temp = event.target.value.slice(12, event.target.value.length - 1)
-
+                const temp = event.target.value.slice(12, event.target.value.length)
                 setSelectedFileName(temp)
               }}
             />

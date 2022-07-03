@@ -11,7 +11,8 @@ function App() {
   const data = require('./api/products.json').products;
 
   useEffect(() => {
-    dispatch(setPhonesArrayAction(data))
+    dispatch(setPhonesArrayAction([...data, JSON.parse(localStorage.objToAdd)]))
+    console.log(JSON.parse(localStorage.objToAdd));
   })
   return (
     <div className="App">
