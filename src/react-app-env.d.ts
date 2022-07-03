@@ -10,10 +10,11 @@ export interface Phone {
 
 export interface State {
   arrayOfPhones : Phone[],
-  minimalPrice: number | null,
-  maximalPrice: number | null,
+  minimalPrice: number,
+  maximalPrice: number,
   currentCurrency: string,
   expandedCard: null | number,
+  sortedBy: string,
 }
 
 export interface Action {

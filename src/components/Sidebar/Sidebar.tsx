@@ -1,11 +1,24 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setCurrentCurrenceAction } from '../../store/actions';
-import { getCurrentCurrencySelector } from '../../store/selectors';
+
+import {
+  setCurrentCurrenceAction,
+  setCurrentMaximalPrice,
+  setCurrentMinimalPrice,
+  setSortedBy,
+} from '../../store/actions';
+
+import {
+  getCurrentCurrencySelector,
+  getMaximalPrice, getMinimalPrice, getSortedBy
+} from '../../store/selectors';
 import './Sidebar.scss';
 
 export const Sidebar : React.FC = () => {
   const dispatch = useDispatch();
   const currency = useSelector(getCurrentCurrencySelector);
+  const minimal = useSelector(getMinimalPrice);
+  const maximal = useSelector(getMaximalPrice);
+  const sorter = useSelector(getSortedBy);
 
   return (
     <div className="sidebar">
@@ -20,7 +33,10 @@ export const Sidebar : React.FC = () => {
           type="number"
           name="minimal_price"
           id="minimal_price"
-          value="100"
+          value={minimal}
+          onChange={(event) => {
+            dispatch(setCurrentMinimalPrice(Number(event.target.value)))
+          }}
         />
         </div>
         <div className="sidebar__priceSetters--container">
@@ -32,7 +48,10 @@ export const Sidebar : React.FC = () => {
           type="number"
           name="maximum_price"
           id="maximum_price"
-          value="10000"
+          value={maximal}
+          onChange={(event) => {
+            dispatch(setCurrentMaximalPrice(Number(event.target.value)))
+          }}
         />
         </div>        
       </div>
@@ -66,15 +85,39 @@ export const Sidebar : React.FC = () => {
       <div className="sidebar__sorting">
         <h2>Sort</h2>
         <label className="sidebar__sorting--label" htmlFor="">
-          <input type="radio" name="sort" id="" checked/>
+          <input
+            type="radio"
+            name="sort"
+            value="priceDown"
+            checked={sorter === "priceDown"}
+            onChange={(event) => {
+              dispatch(setSortedBy(event.target.value))
+            }}
+          />
           price up
         </label>
         <label className="sidebar__sorting--label" htmlFor="">
-          <input type="radio" name="sort" id="" />
+          <input
+            type="radio"
+            name="sort"
+            value="priceUp"
+            checked={sorter === "priceUp"}
+            onChange={(event) => {
+              dispatch(setSortedBy(event.target.value))
+            }}
+          />
           price down
         </label>
         <label className="sidebar__sorting--label" htmlFor="">
-          <input type="radio" name="sort" id="" />
+          <input
+            type="radio"
+            name="sort"
+            value="alphabetical"
+            checked={sorter === "alphabetical"}
+            onChange={(event) => {
+              dispatch(setSortedBy(event.target.value))
+            }}
+          />
           alphabetical
         </label>
       </div>

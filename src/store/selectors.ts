@@ -9,3 +9,5 @@ export const getCurrentCurrencySelector = (state : State) => state.currentCurren
 export const getMinimalPrice = (state : State) => state.minimalPrice;
 
 export const getMaximalPrice = (state : State) => state.maximalPrice;
+
+export const getSortedBy = (state : State) => state.sortedBy;
