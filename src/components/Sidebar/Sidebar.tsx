@@ -1,6 +1,12 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { setCurrentCurrenceAction } from '../../store/actions';
+import { getCurrentCurrencySelector } from '../../store/selectors';
 import './Sidebar.scss';
 
 export const Sidebar : React.FC = () => {
+  const dispatch = useDispatch();
+  const currency = useSelector(getCurrentCurrencySelector);
+
   return (
     <div className="sidebar">
       <h2 className="sidebar__heading">Price</h2>
@@ -38,7 +44,10 @@ export const Sidebar : React.FC = () => {
             name="currency"
             value="usd"
             id="usd_currency"
-            checked
+            checked={currency === 'usd'}
+            onChange={(event) => {
+              dispatch(setCurrentCurrenceAction(event.target.value))
+            }}
           />
         <label htmlFor="usd_currency" className="sidebar__currency--label">USD</label>
         <input
@@ -46,7 +55,11 @@ export const Sidebar : React.FC = () => {
             type="radio"
             name="currency"
             value="uah"
+            checked={currency === 'uah'}
             id="uah_currency"
+            onChange={(event) => {
+              dispatch(setCurrentCurrenceAction(event.target.value))
+            }}
           />  
         <label htmlFor="uah_currency" className="sidebar__currency--label">UAH</label>  
       </div>

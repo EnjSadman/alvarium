@@ -6,11 +6,11 @@ import './CardsContainer.scss';
 export const CardsContainer : React.FC = () => {
   const phonesArray = useSelector(getPhonesArraySelector);
 
-  console.log(phonesArray);
   return (
     <div className="cardsContainer">
       {phonesArray.map(singlePhone => (
         <Card
+          id={singlePhone.id}
           name={singlePhone.name}
           price={singlePhone.price}
           image={singlePhone.image}

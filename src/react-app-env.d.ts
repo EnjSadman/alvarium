@@ -13,6 +13,7 @@ export interface State {
   minimalPrice: number | null,
   maximalPrice: number | null,
   currentCurrency: string,
+  expandedCard: null | number,
 }
 
 export interface Action {
