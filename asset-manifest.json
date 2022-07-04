@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/alvarium/static/css/main.d17fb393.css",
+    "main.js": "/alvarium/static/js/main.1360494c.js",
+    "static/js/787.5e707317.chunk.js": "/alvarium/static/js/787.5e707317.chunk.js",
+    "static/media/8.jpg": "/alvarium/static/media/8.f5d96d93363d7b3a040b.jpg",
+    "static/media/6.jpg": "/alvarium/static/media/6.e7c79162df8e7c291588.jpg",
+    "static/media/7.jpg": "/alvarium/static/media/7.0deb21a24112d884cd8e.jpg",
+    "static/media/1.jpg": "/alvarium/static/media/1.5fbbedd547ff19476917.jpg",
+    "static/media/4.jpg": "/alvarium/static/media/4.a741bbb6e6e0b6e1c9bf.jpg",
+    "static/media/3.jpg": "/alvarium/static/media/3.8661ee757873d1a92513.jpg",
+    "static/media/5.jpg": "/alvarium/static/media/5.e27099960b64389436e8.jpg",
+    "static/media/10.jpg": "/alvarium/static/media/10.fa8fb071f23846072b31.jpg",
+    "static/media/2.jpg": "/alvarium/static/media/2.a7c6a9b0b8ae1884a943.jpg",
+    "static/media/9.jpg": "/alvarium/static/media/9.c50c4170b8bc22eef645.jpg",
+    "index.html": "/alvarium/index.html",
+    "main.d17fb393.css.map": "/alvarium/static/css/main.d17fb393.css.map",
+    "main.1360494c.js.map": "/alvarium/static/js/main.1360494c.js.map",
+    "787.5e707317.chunk.js.map": "/alvarium/static/js/787.5e707317.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d17fb393.css",
+    "static/js/main.1360494c.js"
+  ]
+}
