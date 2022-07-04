@@ -52,6 +52,10 @@ export const BottomMenu : React.FC = () => {
             }
 
             localStorage.setItem('objToAdd', JSON.stringify(phoneToAdd))
+            setName('');
+            setPrice(0);
+            setDescription('');
+            setSelectedFileName('');
           }
         }}
       >
