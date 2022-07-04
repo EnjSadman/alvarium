@@ -26,32 +26,32 @@ export const BottomMenu : React.FC = () => {
             setValidOfName(true);
           }
 
-          if(price <= 0) {
+          if (price <= 0) {
             setValidOfPrice(true);
           }
 
-          if(description === '') {
+          if (description === '') {
             setValidOfDescription(true);
           }
 
-          if(selectedFileName === '') {
+          if (selectedFileName === '') {
             setValidOfDescription(true);
           }
 
-          if(selectedFileName === '') {
+          if (selectedFileName === '') {
             setImageSelected(true);
           }
 
-          if (!nameNotValid && !priceNotValid && !descriptionNotValid && !selectedFileName) {
+          if (!nameNotValid && !priceNotValid && !descriptionNotValid && !isImageSelected) {
             const phoneToAdd = {
-              'id': 500,
-              'name' : name,
-              'price' : price,
-              'image' : selectedFileName,
-              'description' : description,
-            }
+              id: 500,
+              name,
+              price,
+              image: selectedFileName,
+              description,
+            };
 
-            localStorage.setItem('objToAdd', JSON.stringify(phoneToAdd))
+            localStorage.setItem('objToAdd', JSON.stringify(phoneToAdd));
             setName('');
             setPrice(0);
             setDescription('');
@@ -64,13 +64,13 @@ export const BottomMenu : React.FC = () => {
             name
             <input
               type="text"
-              className={classNames("form__inputs--text", {'invalid_input' : nameNotValid})}
+              className={classNames('form__inputs--text', { invalid_input: nameNotValid })}
               value={name}
               onChange={(event) => {
                 setName(event.target.value);
 
                 if (nameNotValid) {
-                  setValidOfName(!nameNotValid)
+                  setValidOfName(!nameNotValid);
                 }
               }}
             />
@@ -79,28 +79,28 @@ export const BottomMenu : React.FC = () => {
             price
             <input
               type="number"
-              className={classNames("form__inputs--number", {'invalid_input' : priceNotValid})}
+              className={classNames('form__inputs--number', { invalid_input: priceNotValid })}
               value={price}
               min="0"
               onChange={(event) => {
-                setPrice(Number(event.target.value))
+                setPrice(Number(event.target.value));
 
                 if (priceNotValid) {
-                  setValidOfPrice(false)
+                  setValidOfPrice(false);
                 }
               }}
             />
-          </label>        
+          </label>
         </div>
         <textarea
-          className={classNames("form__textarea", {'invalid_input' : descriptionNotValid})}
+          className={classNames('form__textarea', { invalid_input: descriptionNotValid })}
           placeholder="description"
           value={description}
           onChange={(event) => {
-            setDescription(event.target.value)
+            setDescription(event.target.value);
 
             if (descriptionNotValid) {
-              setValidOfDescription(!descriptionNotValid)
+              setValidOfDescription(!descriptionNotValid);
             }
           }}
         />
@@ -113,25 +113,25 @@ export const BottomMenu : React.FC = () => {
               type="file"
               accept="image/png, image/jpeg"
               onChange={(event) => {
-                const temp = event.target.value.slice(12, event.target.value.length)
-                setSelectedFileName(temp)
+                console.log(event.target);
+                const temp = event.target.value.slice(12, event.target.value.length);
+                setSelectedFileName(temp);
               }}
             />
             <label
               htmlFor="img_upload"
-              className={classNames("form__label--button", {"invalid_label" : isImageSelected})}
+              className={classNames('form__label--button', { invalid_label: isImageSelected })}
             >
-             {(isImageSelected) 
-              ? 'select an image'
-              : '+'
-            }
+              {(isImageSelected)
+                ? 'select an image'
+                : '+'}
             </label>
           </label>
         </div>
-          <button className="form__submit" type="submit">
-            Save
-          </button>
+        <button className="form__submit" type="submit">
+          Save
+        </button>
       </form>
     </div>
-  )
-}
+  );
+};
