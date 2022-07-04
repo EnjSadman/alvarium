@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alvarium/static/css/main.d17fb393.css",
-    "main.js": "/alvarium/static/js/main.1360494c.js",
+    "main.js": "/alvarium/static/js/main.d7a3180e.js",
     "static/js/787.5e707317.chunk.js": "/alvarium/static/js/787.5e707317.chunk.js",
     "static/media/8.jpg": "/alvarium/static/media/8.f5d96d93363d7b3a040b.jpg",
     "static/media/6.jpg": "/alvarium/static/media/6.e7c79162df8e7c291588.jpg",
@@ -15,11 +15,11 @@
     "static/media/9.jpg": "/alvarium/static/media/9.c50c4170b8bc22eef645.jpg",
     "index.html": "/alvarium/index.html",
     "main.d17fb393.css.map": "/alvarium/static/css/main.d17fb393.css.map",
-    "main.1360494c.js.map": "/alvarium/static/js/main.1360494c.js.map",
+    "main.d7a3180e.js.map": "/alvarium/static/js/main.d7a3180e.js.map",
     "787.5e707317.chunk.js.map": "/alvarium/static/js/787.5e707317.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d17fb393.css",
-    "static/js/main.1360494c.js"
+    "static/js/main.d7a3180e.js"
   ]
 }
