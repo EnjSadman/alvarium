@@ -2,6 +2,7 @@
 
 *{
   margin: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -9,9 +10,18 @@
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: floralwhite;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
+    border-bottom: 1px solid gray;
   }
 }
 
@@ -50,7 +60,8 @@
   }
 }
 
-.container {
-  max-width: 980px;
-  margin: 0 auto;
+.container {   
+    max-width: 980px;
+    padding: 20px 0;
+    margin: 0 auto;
 }

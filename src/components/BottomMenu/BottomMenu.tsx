@@ -38,7 +38,11 @@ export const BottomMenu : React.FC = () => {
             setValidOfDescription(true);
           }
 
-          if (!nameNotValid && !priceNotValid && !descriptionNotValid) {
+          if(selectedFileName === '') {
+            setImageSelected(true);
+          }
+
+          if (!nameNotValid && !priceNotValid && !descriptionNotValid && !selectedFileName) {
             const phoneToAdd = {
               'id': 500,
               'name' : name,
@@ -109,8 +113,14 @@ export const BottomMenu : React.FC = () => {
                 setSelectedFileName(temp)
               }}
             />
-            <label htmlFor="img_upload" className="form__label--button">
-              +
+            <label
+              htmlFor="img_upload"
+              className={classNames("form__label--button", {"invalid_label" : isImageSelected})}
+            >
+             {(isImageSelected) 
+              ? 'select an image'
+              : '+'
+            }
             </label>
           </label>
         </div>

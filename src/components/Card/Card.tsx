@@ -53,12 +53,12 @@ export const Card : React.FC<Props> = ({id, name, price, description, image}) =>
             <div className="card__info info">
                 <h3 className="info__header">{name}</h3>
                 <h4 className="info__price">{`${calculatedPrice} ${currencyName.toUpperCase()}`}</h4>
-                {((description.length <= 150) || (id === expandedCard))
+                {((description.length <= 110) || (id === expandedCard))
                 ?   (<p className="info__description">{description}</p>)
                 : (
                     <>
                         <p className="info__description">
-                            {description.slice(0, description.indexOf(' ', 150)) + '...'}
+                            {description.slice(0, description.indexOf(' ', 110)) + '...'}
                             <button
                                 type="button"
                                 className="info__description--expandable"

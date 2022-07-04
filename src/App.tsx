@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import './App.scss';
 import { BottomMenu } from './components/BottomMenu/BottomMenu';
@@ -16,7 +16,7 @@ function App() {
   })
   return (
     <div className="App">
-      <div className="container">
+      <div className="App__container container">
         <div className="App__content">
           <Sidebar />
           <CardsContainer />

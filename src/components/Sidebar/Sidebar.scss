@@ -1,5 +1,7 @@
 .sidebar {
   left: 0px;
+  border-right: 1px solid gray;
+  padding-left: 20px;
 
   &__priceSetters {
     display: flex;

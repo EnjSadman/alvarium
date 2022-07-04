@@ -1,12 +1,10 @@
 .bottomMenu {
-  display: flex;
-  justify-content: center;
-
   &__form {
     width: 500px;
     display: grid;
     grid-template-columns: 0.8fr 1fr;
     column-gap: 50px;
+    margin: 0 auto;
   }
 }
 
@@ -57,10 +55,20 @@
 
   &__submit {
     margin-top: 50px;
+    background-color: rgb(42, 42, 193);
+    color: white;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
   }
 }
 
 .invalid_input {
   color: red;
   border: solid 1px red;
+}
+
+.invalid_label {
+  background-color: red;
+  color: white;
 }
