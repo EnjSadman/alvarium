@@ -11,8 +11,13 @@ function App() {
   const data = require('./api/products.json').products;
 
   useEffect(() => {
-    dispatch(setPhonesArrayAction([...data, JSON.parse(localStorage.objToAdd)]))
-    console.log(JSON.parse(localStorage.objToAdd));
+    if (localStorage.objToAdd !== undefined) {
+      dispatch(setPhonesArrayAction([...data, JSON.parse(localStorage.objToAdd)]))
+      console.log(JSON.parse(localStorage.objToAdd));
+    } else {
+      dispatch(setPhonesArrayAction(data))
+    }
+    
   })
   return (
     <div className="App">
